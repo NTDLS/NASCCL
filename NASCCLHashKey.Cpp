@@ -60,7 +60,7 @@ void HashKey(const void *sRawKey, int iRawKeySz, void *sKeyHash, int iKeyHashSz)
 
 void HashKey(const char *sRawKey, void *sKeyHash, int iKeyHashSz)
 {
-	HashKey(sRawKey, strlen(sRawKey), sKeyHash, iKeyHashSz);
+	HashKey(sRawKey, (int)strlen(sRawKey), sKeyHash, iKeyHashSz);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

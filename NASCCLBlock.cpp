@@ -202,7 +202,7 @@ bool NASCCLBlock::Initialize(const void *pKey, unsigned int iKeySz)
 */
 bool NASCCLBlock::Initialize(const char *sKey)
 {
-	return this->Initialize(sKey, strlen(sKey), false);
+	return this->Initialize(sKey, (int)strlen(sKey), false);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -211,7 +211,7 @@ bool NASCCLBlock::Initialize(const char *sKey)
 */
 bool NASCCLBlock::Initialize(const char *sKey, bool bInAutoReset)
 {
-	return this->Initialize(sKey, strlen(sKey), bInAutoReset);
+	return this->Initialize(sKey, (int)strlen(sKey), bInAutoReset);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -12,9 +12,11 @@
 
 #include "NASCCL.H"
 
+
 #ifdef _USE_GLOBAL_MEMPOOL
-#include "../CMemPool/CMemPool.H"
-extern CMemPool *pMem; //pMem must be defined and initalized elsewhere.
+#include "../NSWFL/NSWFL.h"
+using namespace NSWFL::Memory;
+extern MemoryPool *pMem; //pMem must be defined and initalized elsewhere.
 #endif
 
 const char *gsKeyWeights[] = {
@@ -117,7 +119,7 @@ int KeyWeight(const void *lpKey, int iKeySz)
 
 int KeyWeight(const char *sKey)
 {
-	return KeyWeight(sKey, strlen(sKey));
+	return KeyWeight(sKey, (int) strlen(sKey));
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

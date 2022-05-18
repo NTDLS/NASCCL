@@ -220,8 +220,8 @@ bool NASCCLBlock::Initialize(const char *sKey, bool bInAutoReset)
 
 	Notes:
 	1) This function should be called before switching from encrypting to decrypting (or vise-versa).
-	2) This function should be called between encrypting logical block of data. For example: If you
-		encrypt 2 files and DO NOT call this function between them... You would have to decrypt the
+	2) This function should be called between encrypting logical blocks of data. For example: If you
+		encrypt 2 files and DO NOT call this function between them... You would have to decrypt them
 		in the same order that you encrypted them.
 */
 

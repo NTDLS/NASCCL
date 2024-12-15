@@ -81,7 +81,7 @@ int KeyWeight(const void *lpKey, int iKeySz)
 
 	//The score is based first on the number of 8-character segments in the password.
 	//	If the password is comprised of more than 6 of these segments then set the
-	//		score to 6, the'll be no extra credit for a really-really long password
+	//		score to 6, there will be no extra credit for a really-really long password
 	//		as it could simply be a string of 1 million A's.
 	if ((iV = iSeg) > KW_EXCELLENT)
 	{
